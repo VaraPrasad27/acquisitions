@@ -3,12 +3,15 @@
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
 ## Repository status and source-of-truth docs
+
 - There is currently no `README.md`, `WARP.md`, or prior `AGENTS.md`.
 - No Claude/Cursor/Copilot instruction files were found (`CLAUDE.md`, `.cursorrules`, `.cursor/rules/`, `.github/copilot-instructions.md`).
 - Treat `package.json`, `drizzle.config.js`, and the `src/` tree as the primary source of truth.
 
 ## Development commands
+
 Run all commands from the repository root.
+
 - Install dependencies: `npm install`
 - Start local development server (Node watch mode): `npm run dev`
 - Lint: `npm run lint`
@@ -20,11 +23,13 @@ Run all commands from the repository root.
 - Open Drizzle Studio: `npm run db:studio`
 
 ## Tests in current state
+
 - No test script and no test files currently exist in the repository.
 - There is no established single-test command yet.
 - If tests are introduced, add explicit npm scripts (for example, `test` and `test:single`) so future agents can run full and single-test workflows consistently.
 
 ## Runtime and environment
+
 - App entrypoint: `src/index.js` (loads env via `dotenv/config` and then starts `src/server.js`).
 - Server listens on `PORT` (defaults to `3000`) in `src/server.js`.
 - Required environment values inferred from code:
@@ -34,6 +39,7 @@ Run all commands from the repository root.
 - `.env.expamle` exists but is misspelled; check/update when adjusting env setup.
 
 ## High-level architecture
+
 This is an Express 5 API with a layered auth flow:
 
 1. **Bootstrap**
@@ -62,12 +68,15 @@ This is an Express 5 API with a layered auth flow:
    - `src/utils/format.js` formats validation errors for API responses.
 
 ## Import alias conventions
+
 `package.json` defines Node `imports` aliases:
+
 - `#config/*`, `#controllers/*`, `#models/*`, `#routes/*`, `#services/*`, `#utils/*`, `#validations/*`
 
 Prefer these aliases over long relative paths when editing or adding modules.
 
 ## Important implementation notes for future edits
+
 - Keep feature logic in the existing layered pattern (route -> controller -> service -> model/DB).
 - When changing DB schema in `src/models`, generate a migration (`npm run db:generate`) and apply it (`npm run db:migrate`).
 - Logging is expected to go through Winston (`src/config/logger.js`), with files under `logs/`.

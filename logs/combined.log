@@ -36,3 +36,20 @@
 {"level":"info","message":"::1 - - [25/May/2026:12:29:44 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 99 \"-\" \"HTTPie\"","service":"acquisitions-api"}
 {"level":"info","message":"User logged out successfully","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [25/May/2026:12:30:26 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 27 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:42:28 +0000] \"POST /health HTTP/1.1\" 500 91 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:43:02 +0000] \"GET /health HTTP/1.1\" 500 91 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:43:04 +0000] \"GET /health HTTP/1.1\" 500 91 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:43:04 +0000] \"GET /health HTTP/1.1\" 500 91 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:43:04 +0000] \"GET /health HTTP/1.1\" 500 91 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/May/2026:14:45:34 +0000] \"GET /health HTTP/1.1\" 500 91 \"-\" \"PostmanRuntime/7.39.1\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:17 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:31 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:31 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [25/May/2026:14:47:32 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:33 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:36 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:36 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"ip":"::1","level":"warn","message":"Rate limit exceeded","path":"/health","service":"acquisitions-api","userAgent":"HTTPie"}
+{"level":"info","message":"::1 - - [25/May/2026:14:47:37 +0000] \"GET /health HTTP/1.1\" 403 51 \"-\" \"HTTPie\"","service":"acquisitions-api"}

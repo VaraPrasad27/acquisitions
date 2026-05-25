@@ -29,17 +29,15 @@ export const signup = async (req, res, next) => {
     cookies.set(res, 'token', token);
 
     logger.info(`User registered successfully: ${email}`);
-    res
-      .status(201)
-      .json({
-        error: 'User registered',
-        user: {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          role: user.role,
-        },
-      });
+    res.status(201).json({
+      error: 'User registered',
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+    });
   } catch (e) {
     logger.error('Signup error', e);
 
